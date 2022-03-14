@@ -1,0 +1,16 @@
+# Main compute configuration.
+compute:
+
+  # Add cloud configuration here.
+  provider:
+    cluster: prod-2
+
+  # Training configuration.
+  train:
+    gpus: 1 # Number of GPUs
+    instance: g4dn.8xlarge # AWS instance type
+
+
+hyper_params:
+  params:
+    training.max: ['10','15','20']
